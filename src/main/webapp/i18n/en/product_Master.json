@@ -1,0 +1,25 @@
+
+{
+    "practiseApp": {
+        "product_Master" : {
+            "home": {
+                "title": "Product Masters",
+                "createLabel": "Create a new Product Master",
+                "createOrEditLabel": "Create or edit a Product Master"
+            },
+            "created": "A new Product Master is created with identifier {{ param }}",
+            "updated": "A Product Master is updated with identifier {{ param }}",
+            "deleted": "A Product Master is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Product Master {{ id }}?"
+            },
+            "detail": {
+                "title": "Product Master"
+            },
+            "product_id": "Product Id",
+            "product_Name": "Product Name",
+            "company_id": "Company Id",
+            "unit_Price": "Unit Price"
+        }
+    }
+}

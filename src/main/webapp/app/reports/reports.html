@@ -1,0 +1,32 @@
+<div>
+    <h2>Reports</h2>
+    <jhi-alert></jhi-alert>
+
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+            <tr>
+                <th>Order Id</th>
+                <th>Order Date</th>
+                <th>Company Name</th>
+                <th>Quantity</th>
+                <th>Product Name</th>
+                <th>Gross Total</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="order_Details in vm.order_Details | orderBy:'order_id'">
+                <td>{{order_Details.order_id}}</td>
+                <td>{{order_Details.order_Date | date:'mediumDate'}}</td>
+                <td>{{order_Details.company_id}}</td>
+                <td>{{order_Details.product_id}}</td>
+                <td>{{order_Details.quantity}}</td>
+                <td>{{order_Details.total}}</td>
+                <td>{{order_Details.vat}}</td>
+                <td>{{order_Details.order_value}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

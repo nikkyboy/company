@@ -1,0 +1,51 @@
+
+<div>
+    <h2><span data-translate="practiseApp.order_Details.detail.title">Order Details</span> {{vm.order_Details.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="practiseApp.order_Details.order_id">Order Id</span></dt>
+        <dd>
+            <span>{{vm.order_Details.order_id}}</span>
+        </dd>
+        <dt><span data-translate="practiseApp.order_Details.order_Date">Order Date</span></dt>
+        <dd>
+            <span>{{vm.order_Details.order_Date | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="practiseApp.order_Details.company_id">Company Id</span></dt>
+        <dd>
+            <span>{{vm.order_Details.company_id}}</span>
+        </dd>
+        <dt><span data-translate="practiseApp.order_Details.product_id">Product Id</span></dt>
+        <dd>
+            <span>{{vm.order_Details.product_id}}</span>
+        </dd>
+        <dt><span data-translate="practiseApp.order_Details.quantity">Quantity</span></dt>
+        <dd>
+            <span>{{vm.order_Details.quantity}}</span>
+        </dd>
+        <dt><span data-translate="practiseApp.order_Details.total">Total</span></dt>
+        <dd>
+            <span>{{vm.order_Details.total}}</span>
+        </dd>
+        <dt><span data-translate="practiseApp.order_Details.vat">Vat</span></dt>
+        <dd>
+            <span>{{vm.order_Details.vat}}</span>
+        </dd>
+        <dt><span data-translate="practiseApp.order_Details.order_value">Order Value</span></dt>
+        <dd>
+            <span>{{vm.order_Details.order_value}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="order-details-detail.edit({id:vm.order_Details.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

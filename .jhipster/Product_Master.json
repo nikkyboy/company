@@ -1,0 +1,28 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "product_id",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "product_Name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "company_id",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "unit_Price",
+            "fieldType": "BigDecimal"
+        }
+    ],
+    "changelogDate": "20180427072559",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "product_master",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

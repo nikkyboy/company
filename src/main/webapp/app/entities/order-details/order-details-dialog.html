@@ -1,0 +1,60 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myOrder_DetailsLabel" data-translate="practiseApp.order_Details.home.createOrEditLabel">Create or edit a Order Details</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group">
+            <label class="control-label" data-translate="practiseApp.order_Details.order_Date" for="field_order_Date">Order Date</label>
+                <div class="input-group">
+                    <input id="field_order_Date" type="text" class="form-control" name="order_Date" uib-datepicker-popup="{{dateformat}}" ng-model="vm.order_Details.order_Date" is-open="vm.datePickerOpenStatus.order_Date"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('order_Date')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="practiseApp.order_Details.company_id">Company Id</label>
+            <select ng-model="vm.order_Details.company_id" class="form-control" ng-options="company.company_id as  (company.company_Name + ' [' + company.company_id  + ']')  for company in vm.company_Masters"></select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="practiseApp.order_Details.product_id">Product Id</label>
+            <select ng-model="product" class="form-control" ng-options="product as (product.product_Name + ' [' + product.company_id + ']') for product in vm.product_Masters"></select>
+
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="practiseApp.order_Details.quantity" for="field_quantity">Quantity</label>
+            <input type="number" class="form-control" name="quantity" id="field_quantity"
+                    ng-model="vm.order_Details.quantity"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="practiseApp.order_Details.total">Total</label>
+            {{vm.order_Details.quantity*product.unit_Price}}
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="practiseApp.order_Details.vat" for="field_vat">Vat</label>
+            <input type="number" class="form-control" name="vat" id="field_vat"
+                    ng-model="vm.order_Details.vat"
+                    disabled/>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="practiseApp.order_Details.order_value" >Order Value</label>
+            {{(vm.order_Details.quantity*product.unit_Price)+((vm.order_Details.vat/100)*(vm.order_Details.quantity*product.unit_Price))}}
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

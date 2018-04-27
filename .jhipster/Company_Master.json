@@ -1,0 +1,20 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "company_id",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "company_Name",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180427071946",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "company_master",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

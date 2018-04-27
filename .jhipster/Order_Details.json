@@ -1,0 +1,44 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "order_id",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "order_Date",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "company_id",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "product_id",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "quantity",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "total",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "vat",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "order_value",
+            "fieldType": "BigDecimal"
+        }
+    ],
+    "changelogDate": "20180427072328",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "order_details",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}
